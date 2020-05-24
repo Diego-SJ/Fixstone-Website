@@ -1,3 +1,4 @@
+/* ---- Nav-bar style in top state -----*/
 nav {
     border-bottom: solid 1px transparent;
     min-height: 60px;
@@ -8,11 +9,25 @@ nav .wrap-core-nav-list,
 nav .nav-header {
     background: transparent;
 }
+/* Links nav-bar top*/
+nav .menu li a {
+    display: block;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: #fff;
+}
 
+nav .menu li.active > a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+nav .menu li a:hover {
+    font-size: large;
+}
 nav .brand {
     display: block;
     position: relative;
-    width: 170px;
+    width: 63px;
     top: 20px;
 }
 
@@ -22,6 +37,7 @@ nav .brand img {
 
 nav .brand img.top{
     display: block;
+    width: 100%;
 }
 
 nav .brand img.scrolled{
@@ -30,23 +46,7 @@ nav .brand img.scrolled{
 
 nav.scrolled .brand img.scrolled{
     display: block;
-}
-
-nav .menu li a {
-    display: block;
-    padding: 20px 25px;
-    text-decoration: none;
-    color: #fff;
-}
-
-nav .menu li.active > a,
-nav .menu li a:hover {
-    color: #e74c3c;
-}
-
-nav.scrolled  .menu li.active > a,
-nav.scrolled  .menu li a:hover {
-	color: #e74c3c;
+    width: 100%;
 }
 
 nav button {
@@ -54,25 +54,31 @@ nav button {
     border: none;
     outline: none;
 }
-
+/*Estilo nav-bar cuando es scroleada*/
 nav.scrolled{
     background: #fff;
-    border-bottom: solid 1px #dfdfdf;
+    border-bottom: solid 2px #1abc9c;
+}
+nav.scrolled .wrap-core-nav-list,
+nav.scrolled .nav-header{
+    background: #fff;
+}
+nav.scrolled .menu li a{
+    color: #000;
 }
 
-nav.scrolled .menu li a{
-    color: #333;
+nav.scrolled .menu li.active > a {
+    color: #1abc9c;
+}
+nav.scrolled .menu li a:hover {
+    font-size: large;
 }
 
 nav.scrolled .brand img.top{
     display: none;
 }
 
-nav.scrolled .wrap-core-nav-list,
-nav.scrolled .nav-header{
-    background: #fff;
-}
-
+/*END COMENT*/
 @media (max-width: 992px) {
     nav .full-container,
     nav .nav-container {
@@ -102,13 +108,13 @@ nav.scrolled .nav-header{
     }
 
     .core-nav .wrap-core-nav-list{
-        border-top: solid 1px rgba(255, 255, 255, 0.2);
-        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        border-top: solid 1px rgba(0, 83, 0, 0.664);
+        border-bottom: solid 1px rgba(0, 83, 0, 0.664);
     }
 
     nav .menu li a {
         padding: 10px 10px;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        border-bottom: solid 1px rgba(0, 83, 0, 0.664);
     }
 
     nav .menu li:last-child a {
